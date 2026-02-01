@@ -32,7 +32,7 @@ def preprocess_data(data):
     #doing encoding for categorical columns
     l = LabelEncoder()
     for d in data.columns:
-        if data[d].dtype="object":
+        if data[d].dtype=="object":
             data[d] = l.fit_transform(data[d])
 
     return data
