@@ -50,7 +50,7 @@ models = {
     "XGBoost": "XGBoost.pkl"
 }
 
-model_opted = smt.sidebar.selectbox("Choose Model", list(model.keys()))
+model_opted = smt.sidebar.selectbox("Choose Model", list(models.keys()))
 
 #final main logic
 
