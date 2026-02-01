@@ -84,7 +84,7 @@ if smt.button(f"Evaluate {model_opted}"):
     #doing scaling for knn and logistic regression with the help of scaler.pkl
     if model_opted in ["Logistic Regression", "K Nearest Neighbor"]:
         sc = joblib.load('model/scaler.pkl')
-        X_test sc.transform(X_test)
+        X_test = sc.transform(X_test)
 
     #doing predictions
     y_predicted = m.predict(X_test)
