@@ -113,7 +113,7 @@ if smt.button(f"Evaluate {model_opted}"):
     cm = confusion_matrix(y_actual, y_predicted)
 
     #plotting visual for confusion matrix
-    fix,ax = plt.subplots()
+    fig,ax = plt.subplots()
     sns.heatmap(cm,annot=True,fmt='d',cmap='Blues',ax=ax)
     smt.pyplot(fig)
 
