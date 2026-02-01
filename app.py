@@ -20,7 +20,7 @@ smt.title("Classification Models Performance Evaluation")
 
 def preprocess_data(data):
     #stripping whitespaces and removing '?'
-    data = data.apply(lambda d: d.str.strip() if d.dtype="object" else d)
+    data = data.apply(lambda d: d.str.strip() if d.dtype=="object" else d)
     data.replace('?',np.nan,inplace=True)
     data.dropna(inplace=True)
 
