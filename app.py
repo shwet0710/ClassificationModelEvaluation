@@ -6,7 +6,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import joblib
-from sklearn.preprocesing import LabelEncoder
+from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import (
 accuracy_score,precision_score,recall_score,roc_auc_score,f1_score,matthews_corrcoef,confusion_matrix
 )
