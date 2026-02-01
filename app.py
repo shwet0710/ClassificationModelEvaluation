@@ -38,7 +38,7 @@ def preprocess_data(data):
     return data
 
 #url for test data from github
-test_data_url = ""
+test_data_url = "https://raw.githubusercontent.com/shwet0710/ClassificationModelEvaluation/refs/heads/main/adult_test.csv"
 
 #model selection dropdown logic
 models = {
