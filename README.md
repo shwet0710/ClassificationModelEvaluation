@@ -7,7 +7,7 @@
 
 ## b. Dataset description
 - The Adult Census Income dataset ("UCI Adult" dataset) is a widely used for binary classification. It is derived from the 1994 U.S. Census database and is used to predict an individual's socio-economic status based on demographic and professional variables.
-- The dataset consists of 32561 records and a total of 14 features including both discrete(categorical) as well as continous(numerical) features.
+- The dataset consists of 32561 records and a total of 14 features in training dataset and 16281 records and same number of features (14) in the test dataset including both discrete(categorical) as well as continous(numerical) features.
 - Categorical features:
   - Workclass: Employment type(Private, Self-emp, State-gov etc.)
   - Education: Highest level of education (Bachelors, Masters, HS-grad, etc.)
