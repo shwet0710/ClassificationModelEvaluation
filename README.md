@@ -53,4 +53,4 @@
 | XGBoost | Best Overall Model. Utilizing a gradient-boosted framework, it optimized for the highest AUC and MCC. Its ability to iteratively correct errors made it significantly more effective at identifying the minority high-income class.|
 
 - Live Streamlit App Link
-https://classificationmodelevaluation-mlassignment2.streamlit.app/
+  - https://classificationmodelevaluation-mlassignment2.streamlit.app/
