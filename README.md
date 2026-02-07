@@ -1,4 +1,4 @@
-# ClassificationModelEvaluation
+# Classification Model Evaluation
 
 ## a. Problem statement
 - Manually analyzing census data to identify high-income individuals is inefficient for large-scale economic planning. Economic indicators such as education, occupation, and capital gains are complex and interrelated, making it difficult to set clear thresholds for income classification without advanced analytics.
@@ -31,7 +31,7 @@
   - Several columns (Workclass, Occupation, Native-Country) contain missing values represented by a "?" string. Our pipeline treats these as NaN and removes them to ensure model stability.
   - The raw data often contains leading spaces (e.g., " Private" instead of "Private"). Our shared logic uses .str.strip() to clean these.
 
-## c. Models used evaluation metrics comparison table
+## c. Models used evaluation metrics comparison table and performance observations
 
 | ML Model Name | Accuracy | AUC | Precision | Recall | F1 | MCC |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -41,5 +41,16 @@
 | **Naive Bayes**| 0.7886 | 0.8222 | 0.7679 | 0.7886 | 0.7592 | 0.3386 |
 | **Random Forest(Ensemble)** | 0.8513 | 0.9043 | 0.8453 | 0.8513 | 0.8463 | 0.5783 |
 | **XGBoost(Ensemble)** | 0.8701 | 0.9262 | 0.8654 | 0.8701 | 0.8650 | 0.6308 |
-  
+
+
+| ML Model Name | Observation about model performance |
+| :--- | :---: |
+| Logistic Regression | Performed as a solid baseline with 82% accuracy. While computationally efficient, it lacked the depth to model the intricate, non-linear interactions between demographic variables and income levels.|
+| Decision Tree | Demonstrated a notable performance jump over linear models. It captured complex feature interactions well, though it remains slightly more prone to variance than the ensemble versions.|
+| kNN | Showed moderate success by identifying local clusters of high-earners. Delivered competitive accuracy (0.8215) but relied heavily on proper feature scaling. It was less effective than ensembles in distinguishing high-income patterns.|
+| Naive Bayes | The lowest performer across all metrics (Accuracy 0.7886, MCC 0.3386). Its assumption that every feature is independent fails in this context, as professional occupation and education levels are logically and statistically linked.|
+| Random Forest | Highly robust with an accuracy of 0.8513. Provided a high level of stability and generalization. By averaging multiple trees, it effectively reduced overfitting and achieved a strong MCC, showing stability in its predictions.|
+| XGBoost | Best Overall Model. Utilizing a gradient-boosted framework, it optimized for the highest AUC and MCC. Its ability to iteratively correct errors made it significantly more effective at identifying the minority high-income class.|
+
+- Live Streamlit App Link
 https://classificationmodelevaluation-mlassignment2.streamlit.app/
